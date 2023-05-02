@@ -1,0 +1,56 @@
+//        ***************************** SIZING NATURE
+//        ------------ d = dynamic
+//        ------------ st  =  static
+
+//        ***************************** SIZING
+//        l   = large
+//        m   = medium
+//        s  = small
+//        xs  = extra small
+//        c  = customized
+
+//        ***************************** ORIENTATION
+//        v   = vertical (top & bottom)
+//        h   = horizontal (left & right)
+
+//Dynamic padding for the vertical Orientation
+$pad-d-v: (
+  'pad-d-l-v': calc(2rem + 12vh),
+  'pad-d-mc-v': calc(1rem + 8vh),
+  'pad-d-m-v': calc(1rem + 6vh),
+  'pad-d-sc-v': calc(1rem + 4vh),
+  'pad-d-s-v': calc(1rem + 1vh),
+);
+
+@function padding-d-v($padd-dv) {
+  @return map-get($pad-d-v, $padd-dv);
+}
+
+//Dynamic padding for the horizontal Orientation
+$pad-d-h: (
+  'pad-d-l-h': calc(2rem + 12vw),
+  'pad-d-mc-h': calc(1rem + 8vw),
+  'pad-d-m-h': calc(1rem + 6vw),
+  'pad-d-sc-h': calc(1rem + 4vw),
+  'pad-d-s-h': calc(1rem + 2vw),
+  'pad-d-xs-h': calc(1rem + 1vw),
+);
+
+@function padding-d-h($padd-dh) {
+  @return map-get($pad-d-h, $padd-dh);
+}
+
+//Static padding for the vertical Orientation
+$pad-st-h: (
+  'pad-st-xl-h': 4rem,
+  'pad-st-lc-h': 3rem,
+  'pad-st-l-h': 2rem,
+  'pad-st-m-h': 1.5rem,
+  'pad-st-s-h': 1rem,
+);
+
+@function padding-st-h($padd-sth) {
+  @return map-get($pad-st-h, $padd-sth);
+}
+
+//Static padding for the horizontal Orientation
