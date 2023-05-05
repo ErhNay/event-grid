@@ -158,7 +158,6 @@ input[type=submit] {
 }
 .header__hero--tickets-link {
   background-color: hsl(327, 97%, 48%);
-  transition: all 0.5s ease-in;
 }
 .header__hero--tickets-link:hover {
   background-color: hsl(253, 82%, 42%);
@@ -178,6 +177,7 @@ input[type=submit] {
   align-items: center;
   gap: 2rem;
   position: relative;
+  border-radius: 0.5rem;
 }
 .countdown__content::before, .countdown__content::after {
   content: "";
