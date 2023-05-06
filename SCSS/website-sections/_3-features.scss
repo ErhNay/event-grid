@@ -1,3 +1,39 @@
 @use '../general-styles/colors' as clrs;
 @use '../general-styles/padding' as pad;
 @use '../general-styles/typography' as type;
+
+.features {
+  background-color: clrs.color-theme('1');
+  // padding-top: 0;
+
+  &__mini-title {
+    &::before {
+      left: -25%;
+    }
+
+    &::after {
+      right: -25%;
+    }
+  }
+
+  &__container {
+    &--feature {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, min-content);
+      gap: 3rem;
+
+      &__icon {
+      }
+
+      &__number {
+      }
+
+      &__title {
+      }
+
+      &__desc {
+      }
+    }
+  }
+}
