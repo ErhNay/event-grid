@@ -9,6 +9,10 @@
     padding: pad.padding-d-v('sc') pad.padding-d-h('s');
   }
 
+  .responsive-grid {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+  }
   // ------------------------------Header Section
 
   .header {
@@ -132,8 +136,13 @@
     }
   }
 
-  .responsive-grid {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1.5rem;
+  // ------------------------------ About
+
+  .about {
+    flex-direction: column-reverse;
+
+    &__img {
+      margin-top: 2rem;
+    }
   }
 }

@@ -380,9 +380,13 @@ input[type=submit] {
 }
 .about__content--para {
   text-align: left;
+  margin-bottom: 0;
 }
 .about__content--para span {
   margin-top: 1.5rem;
+}
+.about__content--date {
+  margin-bottom: 0;
 }
 .about__content--date span {
   display: inline-block;
@@ -407,6 +411,10 @@ input[type=submit] {
 @media screen and (max-width: 600px) {
   .padd {
     padding: calc(1rem + 4vh) calc(1rem + 2vw);
+  }
+  .responsive-grid {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
   }
   .header__nav {
     flex-direction: column;
@@ -495,8 +503,10 @@ input[type=submit] {
   .countdown__content--day div p:first-child, .countdown__content--hour div p:first-child, .countdown__content--minute div p:first-child, .countdown__content--second div p:first-child {
     font-size: calc(2rem + 2.5vw);
   }
-  .responsive-grid {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    gap: 1.5rem;
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about__img {
+    margin-top: 2rem;
   }
 }/*# sourceMappingURL=main-style.css.map */
