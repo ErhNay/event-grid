@@ -278,8 +278,73 @@ input[type=submit] {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, min-content);
-  gap: 3rem;
+  place-items: start;
+  gap: 1.5rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  padding: 3rem 3rem;
+  position: relative;
+  overflow: hidden;
 }
+.features__container--feature::before, .features__container--feature::after {
+  content: "";
+  position: absolute;
+  height: 30%;
+  width: 2rem;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease-in-out;
+}
+.features__container--feature::before {
+  top: 0;
+  left: 0;
+  background-image: url("../images/features/dots-blue.svg");
+}
+.features__container--feature::after {
+  bottom: 0;
+  right: 0;
+  background-image: url("../images/features/dots-pink.svg");
+}
+@media (hover) {
+  .features__container--feature::before {
+    left: -3rem;
+  }
+  .features__container--feature::after {
+    right: -3rem;
+  }
+  .features__container--feature:hover::before {
+    left: 0;
+  }
+  .features__container--feature:hover::after {
+    right: 0;
+  }
+}
+.features__container--feature__icon {
+  grid-column: 1/1;
+  grid-row: 1/2;
+  font-size: 2.5rem;
+  padding: 1rem;
+  background-color: hsl(253, 82%, 42%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.features__container--feature__number {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  justify-self: end;
+  font-size: 4rem;
+  color: rgba(17, 18, 50, 0.08);
+}
+.features__container--feature__title {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  font-size: 2rem;
+}
+.features__container--feature__desc {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+}
+
 @media screen and (max-width: 1100px) {
   .header__nav--links {
     flex-basis: 100%;
@@ -382,5 +447,9 @@ input[type=submit] {
   }
   .countdown__content--day div p:first-child, .countdown__content--hour div p:first-child, .countdown__content--minute div p:first-child, .countdown__content--second div p:first-child {
     font-size: calc(2rem + 2.5vw);
+  }
+  .responsive-grid {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
   }
 }/*# sourceMappingURL=main-style.css.map */
