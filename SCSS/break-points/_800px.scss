@@ -1,0 +1,21 @@
+@media screen and (max-width: 800px) {
+  //------------------------------------EVENTS
+
+  .events {
+    &__timing {
+      &--event {
+        grid-template-rows: repeat(3, min-content);
+
+        &__desc {
+          justify-self: center;
+        }
+
+        &__link {
+          grid-column: 1 / -1;
+          grid-row: 3 / 4;
+          justify-self: center;
+        }
+      }
+    }
+  }
+}

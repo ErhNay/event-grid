@@ -1,0 +1,24 @@
+@media screen and (max-width: 500px) {
+  //------------------------------------EVENTS
+
+  .events {
+    &__timing {
+      &--event {
+        &__desc {
+          flex-direction: column;
+          gap: 2rem;
+
+          div {
+            p:first-of-type {
+              text-align: center;
+            }
+            p:last-of-type {
+              flex-direction: column;
+              gap: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
