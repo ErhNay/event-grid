@@ -737,7 +737,7 @@ input[type=submit] {
   position: relative;
 }
 .blogs__container--blog:hover {
-  transform: scale(0.97);
+  transform: scale(0.95);
   box-shadow: none;
 }
 .blogs__container--blog__date {
