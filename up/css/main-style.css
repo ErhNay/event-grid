@@ -910,6 +910,84 @@ input[type=submit] {
   transform: scale(1.1);
 }
 
+.blog-page {
+  display: flex;
+  gap: 3rem;
+}
+.blog-page .blog__articles {
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1rem;
+}
+.blog-page .blogs__popular-feeds {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.blog-page .blogs__popular-feeds--search {
+  background-color: hsl(238, 50%, 13%);
+  padding: 3rem 3rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.blog-page .blogs__popular-feeds--search fieldset {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem 1rem;
+}
+.blog-page .blogs__popular-feeds--search fieldset input,
+.blog-page .blogs__popular-feeds--search fieldset i {
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+}
+.blog-page .blogs__popular-feeds--search fieldset i {
+  background-color: hsl(253, 82%, 42%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+}
+.blog-page .blogs__popular-feeds--content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  background-color: hsl(238, 50%, 13%);
+  padding: 3rem 3rem;
+  border-radius: 0.5rem;
+}
+.blog-page .blogs__popular-feeds--content__title {
+  color: hsl(0, 0%, 100%);
+}
+.blog-page .blogs__popular-feeds--content__feed {
+  display: grid;
+  grid-template-columns: repeat(3, 10rem);
+  grid-template-rows: repeat(2, 4rem);
+  gap: 1.5rem;
+}
+.blog-page .blogs__popular-feeds--content__feed--img {
+  grid-column: 1/2;
+  grid-row: 1/span 2;
+}
+.blog-page .blogs__popular-feeds--content__feed--img img {
+  border-radius: 0.5rem;
+}
+.blog-page .blogs__popular-feeds--content__feed--desc {
+  grid-column: 2/-1;
+  grid-row: 1/2;
+  align-self: center;
+  color: hsl(0, 0%, 100%);
+}
+.blog-page .blogs__popular-feeds--content__feed--date {
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+  justify-self: end;
+  align-self: end;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 1100px) {
   .header__nav--links {
     flex-basis: 100%;
