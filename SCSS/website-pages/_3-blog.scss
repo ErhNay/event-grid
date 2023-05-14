@@ -90,6 +90,12 @@
 
           color: clrs.color-type('1');
           font-size: type.font-size-st('sc');
+
+          span {
+            sup {
+              font-weight: 400;
+            }
+          }
         }
       }
     }
